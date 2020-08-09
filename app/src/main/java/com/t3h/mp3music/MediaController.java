@@ -80,6 +80,10 @@ public class MediaController implements MediaPlayer.OnCompletionListener {
         create(index);
     }
 
+    public boolean isPlaying(){
+        return mediaPlayer == null ? false : mediaPlayer.isPlaying();
+    }
+
     @Override
     public void onCompletion(MediaPlayer mp) {
         //index++;

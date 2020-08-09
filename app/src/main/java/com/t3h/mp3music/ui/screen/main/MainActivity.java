@@ -121,4 +121,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     public MP3Service getService() {
         return service;
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbindService(connection);
+    }
 }
